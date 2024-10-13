@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Product Management</title>
+            <link rel="stylesheet" href="../../assets/css/prodoctManagement.css"> 
+
+        </head>
+        <body>
+            <div class="container">
+                <header>
+                    <h1>Product Management</h1>
+                </header>
+                
+                <form id="productForm" class="product-form">
+                    <h2>Add New Product</h2>
+                    <input type="text" id="name">
+                    <input type="number" id="price" placeholder="Price" required>
+                    <input type="number" id="quantity" placeholder="Quantity" required>
+                    <input type="file" id="image" accept="image/*" required>
+                    <button type="submit">Add Product</button>
+                </form>
+
+                <section class="product-list">
+                    <h2>Existing Products</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Image</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productTable">
+                            
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+
+            <script src="../../assets/js/productManagement.js"></script>
+        </body>
+    </html>

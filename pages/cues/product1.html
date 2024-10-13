@@ -1,122 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LKH - Professional Cue</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
-</head>
-<body class="bg-gray-100">
-    <header class="bg-blue-600 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">LKH</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="../../index.html" class="hover:underline">Home</a></li>
-                    <li><a href="../../index.html#shop" class="hover:underline">Shop</a></li>
-                    <li><a href="../../index.html#about" class="hover:underline">About</a></li>
-                    <li><a href="../../index.html#contact" class="hover:underline">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="nav-icons">👤</div>
-        </div>
-    </header>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Product Page - LKH Billiard Cues</title>
+            <link rel="stylesheet" href="../../assets/css/product.css">
+        </head>
+        <body class="product-page-background">
+            <header class="header">
+                <div class="container header-container">
+                    <h1 class="logo">LKH Cues</h1>
+                    <nav class="navigation">
+                        <ul class="nav-list">
+                            <li><a href="../../index.html" class="nav-item">Home</a></li>
+                            <li><a href="../../index.html#shop" class="nav-item">Shop</a></li>
+                            <li><a href="../../index.html#about" class="nav-item">About</a></li>
+                            <li><a href="../../index.html#contact" class="nav-item">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <button id="profileButton" class="profile-btn">
+                        <i class="user-icon">👤</i>
+                    </button>
+                </div>
+            </header>
 
-    <main class="container mx-auto mt-8">
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <div class="md:flex">
-                <div class="md:flex-shrink-0">
-                    <img class="h-48 w-full object-cover md:w-48" src="../../assets/icons/cue1.webp" alt="Professional Cue">
-                </div>
-                <div class="p-8">
-                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Professional Cue</div>
-                    <h2 class="block mt-1 text-lg leading-tight font-medium text-black">Premium Performance Billiard Cue</h2>
-                    <p class="mt-2 text-gray-500">This professional cue is perfect for advanced players who want the best performance on the table.</p>
-                    <div class="mt-4">
-                        <span class="text-yellow-400">★★★★☆</span>
-                        <span class="ml-2 text-gray-600">4.5 (128 reviews)</span>
+            <main class="main-content">
+                <!-- Product Section -->
+                <section class="product-section">
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="../../assets/icons/cue1.webp" alt="Professional Billiard Cue" class="product-image">
+                        </div>
+                        <div class="product-details">
+                            <h2 class="product-title">Premium Billiard Cue</h2>
+                            <p class="product-description">Elevate your game with this professional-grade cue, designed for superior control and balance.</p>
+                            <div class="product-rating">
+                                <span class="rating-stars">★★★★☆</span>
+                                <span class="review-count">(2 reviews)</span>
+                            </div>
+                            <div class="product-purchase">
+                                <span class="product-price">$199.00</span>
+                                <button id="addToCartButton" class="cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mt-4 flex justify-between items-center">
-                        <span class="text-2xl font-bold text-gray-900">$299.99</span>
-                        <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+                </section>
 
-        <div class="mt-8">
-            <h3 class="text-xl font-semibold mb-4">Customer Reviews</h3>
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden p-6">
-                <div class="mb-4 pb-4 border-b">
-                    <div class="flex items-center mb-2">
-                        <span class="text-yellow-400 mr-2">★★★★★</span>
-                        <span class="font-semibold">John Doe</span>
-                    </div>
-                    <p>Amazing quality, highly recommend! The balance is perfect, and the finish is top-notch.</p>
-                </div>
-                <div class="mb-4 pb-4 border-b">
-                    <div class="flex items-center mb-2">
-                        <span class="text-yellow-400 mr-2">★★★★☆</span>
-                        <span class="font-semibold">Jane Smith</span>
-                    </div>
-                    <p>Perfect balance and weight. The only reason it's not 5 stars is the slightly higher price point.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-2">Leave a Review</h4>
-                    <form>
-                        <div class="mb-4">
-                            <label for="rating" class="block mb-2">Rating:</label>
-                            <select id="rating" name="rating" class="w-full border rounded p-2">
-                                <option value="5">★★★★★</option>
-                                <option value="4">★★★★☆</option>
-                                <option value="3">★★★☆☆</option>
-                                <option value="2">★★☆☆☆</option>
-                                <option value="1">★☆☆☆☆</option>
-                            </select>
+                <!-- Related Products Section -->
+                <section class="related-products-section">
+                    <h3 class="section-heading">Related Products</h3>
+                    <div class="related-products">
+                        <div class="related-product-card">
+                            <img src="../../assets/icons/AdvancedBilliardCue1.jpg" alt="Advanced Billiard Cue" class="related-product-image">
+                            <p class="related-product-name">Advanced Billiard Cue</p>
+                            <p class="related-product-price">$180.00</p>
                         </div>
-                        <div class="mb-4">
-                            <label for="comment" class="block mb-2">Comment:</label>
-                            <textarea id="comment" name="comment" rows="3" class="w-full border rounded p-2"></textarea>
+                        <div class="related-product-card">
+                            <img src="../../assets/icons/BeginnerBilliardCue1.webp" alt="Beginner Billiard Cue" class="related-product-image">
+                            <p class="related-product-name">Beginner Billiard Cue</p>
+                            <p class="related-product-price">$120.00</p>
                         </div>
-                        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Submit Review</button>
+                        <div class="related-product-card">
+                            <img src="../../assets/icons/Pro-LevelBilliardCue1.jpg" alt="Pro-Level Billiard Cue" class="related-product-image">
+                            <p class="related-product-name">Pro-Level Billiard Cue</p>
+                            <p class="related-product-price">$300.00</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reviews Section -->
+                <section class="reviews-section">
+                    <h3 class="reviews-heading">Customer Reviews</h3>
+                    <ul class="reviews-list">
+                        <li class="review-item">
+                            <span class="reviewer-name">Mark H.</span>
+                            <span class="review-rating">★★★★☆</span>
+                            <p class="review-comment">"This cue improved my shots! Worth every penny."</p>
+                        </li>
+                        <li class="review-item">
+                            <span class="reviewer-name">Sarah W.</span>
+                            <span class="review-rating">★★★★★</span>
+                            <p class="review-comment">"Excellent balance and feel. A must-have for pros!"</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Leave a Review Section -->
+                <section class="review-section">
+                    <h3 class="review-heading">Leave a Review</h3>
+                    <form id="reviewForm" class="review-form">
+                        <label for="reviewerName">Name:</label>
+                        <input type="text" id="reviewerName" class="review-input" required>
+
+                        <label for="reviewRating">Rating:</label>
+                        <div id="ratingStars" class="rating-stars-input">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                        </div>
+
+                        <label for="reviewText">Review:</label>
+                        <textarea id="reviewText" class="review-textarea" rows="4" required></textarea>
+
+                        <button type="submit" class="submit-btn">Submit</button>
                     </form>
-                </div>
-            </div>
-        </div>
 
-        <div class="mt-8">
-            <h3 class="text-xl font-semibold mb-4">Related Products</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="/api/placeholder/300/200" alt="Cue Chalk" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h4 class="font-semibold">Premium Cue Chalk</h4>
-                        <p class="text-gray-600">$9.99</p>
-                    </div>
-                </div>
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="/api/placeholder/300/200" alt="Cue Case" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h4 class="font-semibold">Deluxe Cue Case</h4>
-                        <p class="text-gray-600">$49.99</p>
-                    </div>
-                </div>
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="/api/placeholder/300/200" alt="Cue Tip" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h4 class="font-semibold">Pro Cue Tip</h4>
-                        <p class="text-gray-600">$14.99</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+                    <ul id="reviewList" class="review-list"></ul>
+                </section>
 
-    <footer class="bg-gray-800 text-white mt-8 py-4">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 LKH. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+                <!-- Comment Section -->
+                <section class="comment-section">
+                    <h3 class="comment-heading">Leave a Comment</h3>
+                    <form id="commentForm" class="comment-form">
+                        <label for="commenterName">Name:</label>
+                        <input type="text" id="commenterName" class="comment-input" required>
+
+                        <label for="commentText">Comment:</label>
+                        <textarea id="commentText" class="comment-textarea" rows="4" required></textarea>
+
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+
+                    <ul id="commentList" class="comment-list"></ul>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <div class="container footer-container">
+                    <p>&copy; 2024 LKH Billiard. All rights reserved.</p>
+                </div>
+            </footer>
+
+            <script src="assets/js/product.js"></script>
+        </body>
+    </html>
