@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Product Page - LKH Billiard Cues</title>
+            <link rel="stylesheet" href="../../assets/css/product.css">
+        </head>
+        <body class="product-page-background">
+            <header class="header">
+                <div class="container header-container">
+                    <h1 class="logo">LKH Cues</h1>
+                    <nav class="navigation">
+                        <ul class="nav-list">
+                            <li><a href="../../index.html" class="nav-item">Home</a></li>
+                            <li><a href="../../index.html#shop" class="nav-item">Shop</a></li>
+                            <li><a href="../../index.html#about" class="nav-item">About</a></li>
+                            <li><a href="../../index.html#contact" class="nav-item">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <button id="profileButton" class="profile-btn">
+                        <i class="user-icon">👤</i>
+                    </button>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <!-- Product Section -->
+                <section class="product-section">
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="../../assets/icons/DeluxeCueCase1.webp" alt="Professional Billiard Cue" class="product-image">
+                        </div>
+                        <div class="product-details">
+                            <h2 class="product-title">Premium Billiard Cue</h2>
+                            <p class="product-description">Elevate your game with this professional-grade cue, designed for superior control and balance.</p>
+                            <div class="product-rating">
+                                <span class="rating-stars">★★★★☆</span>
+                                <span class="review-count">(2 reviews)</span>
+                            </div>
+                            <div class="product-purchase">
+                                <span class="product-price">$199.00</span>
+                                <button id="addToCartButton" class="cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Related Products Section -->
+                <section class="related-products-section">
+                    <h3 class="section-heading">Related Products</h3>
+                    <div class="related-products">
+                        <div class="related-product-card">
+                            <img src="../../assets/icons/testp.png" alt="Advanced Billiard Cue" class="related-product-image">
+                            <p class="related-product-name">Advanced Billiard Cue</p>
+                            <p class="related-product-price">$180.00</p>
+                        </div>
+                        <div class="related-product-card">
+                            <img src="../../assets/icons/testp.png" alt="Beginner Billiard Cue" class="related-product-image">
+                            <p class="related-product-name">Beginner Billiard Cue</p>
+                            <p class="related-product-price">$120.00</p>
+                        </div>
+                        <div class="related-product-card">
+                            <img src="../../assets/icons/testp.png" alt="Pro-Level Billiard Cue" class="related-product-image">
+                            <p class="related-product-name">Pro-Level Billiard Cue</p>
+                            <p class="related-product-price">$300.00</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reviews Section -->
+                <section class="reviews-section">
+                    <h3 class="reviews-heading">Customer Reviews</h3>
+                    <ul class="reviews-list">
+                        <li class="review-item">
+                            <span class="reviewer-name">Mark H.</span>
+                            <span class="review-rating">★★★★☆</span>
+                            <p class="review-comment">"This cue improved my shots! Worth every penny."</p>
+                        </li>
+                        <li class="review-item">
+                            <span class="reviewer-name">Sarah W.</span>
+                            <span class="review-rating">★★★★★</span>
+                            <p class="review-comment">"Excellent balance and feel. A must-have for pros!"</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Leave a Review Section -->
+                <section class="review-section">
+                    <h3 class="review-heading">Leave a Review</h3>
+                    <form id="reviewForm" class="review-form">
+                        <label for="reviewerName">Name:</label>
+                        <input type="text" id="reviewerName" class="review-input" required>
+
+                        <label for="reviewRating">Rating:</label>
+                        <div id="ratingStars" class="rating-stars-input">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                        </div>
+
+                        <label for="reviewText">Review:</label>
+                        <textarea id="reviewText" class="review-textarea" rows="4" required></textarea>
+
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+
+                    <ul id="reviewList" class="review-list"></ul>
+                </section>
+
+                <!-- Comment Section -->
+                <section class="comment-section">
+                    <h3 class="comment-heading">Leave a Comment</h3>
+                    <form id="commentForm" class="comment-form">
+                        <label for="commenterName">Name:</label>
+                        <input type="text" id="commenterName" class="comment-input" required>
+
+                        <label for="commentText">Comment:</label>
+                        <textarea id="commentText" class="comment-textarea" rows="4" required></textarea>
+
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+
+                    <ul id="commentList" class="comment-list"></ul>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <div class="container footer-container">
+                    <p>&copy; 2024 LKH Billiard. All rights reserved.</p>
+                </div>
+            </footer>
+
+            <script src="assets/js/product.js"></script>
+        </body>
+    </html>

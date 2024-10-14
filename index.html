@@ -18,6 +18,7 @@
                         <li><a href="#shop">Shop</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li><a href="pages/porductManagement/productManagement.html" target="_blank">Products</a></li>
                     </ul>
                     <div class="nav-icons">
                         <button id="searchBtn">🔍</button>
@@ -39,21 +40,48 @@
 
                 <section id="shop" class="main featured-categories">
                     <div class="container">
-                        <h2>Featured Categories</h2>
-                        <div class="category-grid">
-                            <!-- Category cards here -->
+                        <div class="container">
+                            <h2>Featured Categories</h2>
+                            <div class="category-grid">
+                                <div class="category-card">
+                                    <img src="assets/icons/DeluxeCueCase1.webp " alt="Accessories">
+                                    <div class="category-content">
+                                        <h3>Accessories</h3>
+                                        <p>Everything you need for the perfect game</p>
+                                        <a href="#" id="accessoriesLink">Shop Accessories →</a>
+                                    </div>
+                                </div>
+
+                                <div class="category-card">
+                                    <img src="assets/icons/cue1.webp" alt="Billiard Cues">
+                                    <div class="category-content">
+                                        <h3>Billiard Cues</h3>
+                                        <p>Professional-grade cues for every player</p>
+                                        <a href="#" id="cuesLink">Shop Cues →</a>
+                                    </div>
+                                </div>
+
+                                <div class="category-card">
+                                    <img src="assets/icons/PremiumBallSet1.webp" alt="Billiard Balls">
+                                    <div class="category-content">
+                                        <h3>Billiard Balls</h3>
+                                        <p>Tournament-quality ball sets</p>
+                                        <a href="#" id="ballsLink">Shop Balls →</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="main featured-products">
+                <section id="home-featured-products" class="main featured-products" >
                     <div class="container">
                         <h2>Featured Products</h2>
                         <select id="categorySelect">
                             <option value="all">All Categories</option>
                         </select>
                         <div class="product-grid">
-                            <!-- Product cards will be dynamically inserted here -->
                         </div>
                     </div>
                 </section>
@@ -133,7 +161,7 @@
 
             <div id="signupPopup" class="modal">
                 <div class="modal-content">
-                    <span class="close" id="singupCloseBtn">&times;</span>
+                    <span class="close" id="signupCloseBtn">&times;</span>
                     <h2>Sign Up</h2>
                     <form onsubmit="signup(this.username.value, this.password.value); return false;">
                         <input type="text" name="username" placeholder="Username" required>

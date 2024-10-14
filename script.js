@@ -47,6 +47,7 @@
     let currentUser = null;
 
     // DOM Elements
+    const header = document.querySelector('header');
     const productGrid = document.querySelector('.product-grid');
     const cartBtn = document.getElementById('cartBtn');
     const cartModal = document.getElementById('cartModal');
@@ -65,15 +66,31 @@
     const signupPopup = document.getElementById('signupPopup');
     const signupCloseBtn = document.getElementById('signupCloseBtn');
     const categorySelect = document.getElementById('categorySelect');
-
+    const accessoriesLink = document.getElementById('accessoriesLink');
+    const cuesLink = document.getElementById('cuesLink');
+    const ballsLink = document.getElementById('ballsLink');
     let cart = [];
+
+    // Sticky Header functionality
+    
+    let scrollThreshold = 30;
+    function handleScroll() {
+        if (window.scrollY > scrollThreshold) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+
+    
+    window.addEventListener('scroll', handleScroll);
 
 
     // Display products
     function displayProducts(productsToShow = products) {
         productGrid.innerHTML = productsToShow.map(product => `
             <div class="product-card">
-                <a href="pages/cues/product${product.id}.html" class="product-link">
+                <a href="pages/products/product${product.id}.html" class="product-link">
                     <img src="${product.image}" alt="${product.name}">
                     <div class="product-content">
                         <h3>${product.name}</h3>
@@ -305,6 +322,10 @@
             alert('Invalid username or password');
         }
     }
+    
+    loginCloseBtn.addEventListener('click', () => {
+        loginPopup.style.display = 'none';
+    });
 
     // User signup
     function signup(username, password) {
@@ -319,6 +340,10 @@
         }
     }
 
+    signupCloseBtn.addEventListener('click', () => {
+        signupPopup.style.display = 'none';
+    });
+
     // Update profile button
     function updateProfileButton() {
         profileBtn.textContent = currentUser ? currentUser.username : 'Login';
@@ -326,13 +351,42 @@
 
     // Show login popup
     function showLoginPopup() {
+        signupPopup.style.display = 'none';
         loginPopup.style.display = 'block';
     }
 
     // Show signup popup
     function showSignupPopup() {
+        loginPopup.style.display = 'none';
         signupPopup.style.display = 'block';
     }
+
+    // Quick accessories link
+    accessoriesLink.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        
+        categorySelect.value = 'Accessories'; 
+        
+        filterByCategory();
+    });
+
+    // Quick Cues link
+    cuesLink.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        
+        categorySelect.value = 'Cues'; 
+        
+        filterByCategory();
+    });
+
+    // Quick accessories link
+    ballsLink.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        
+        categorySelect.value = 'Balls'; 
+        
+        filterByCategory();
+    });
 
     // Filter products by category
     function filterByCategory() {
@@ -372,12 +426,12 @@
 
     profileBtn.addEventListener('click', () => {
         if (currentUser) {
-            // Show user profile or logout option
         } else {
             showLoginPopup();
         }
     });
 
+    
     categorySelect.addEventListener('change', filterByCategory);
 
     // Initialize the application

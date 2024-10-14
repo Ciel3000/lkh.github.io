@@ -140,9 +140,15 @@ body, html {
     margin-top: 3rem;
 }
 
+.related-products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+
+}
+
 .related-product-card {
     display: inline-block;
-    width: 30%;
     background-color: #fff;
     margin-right: 1%;
     border-radius: 0.5rem;
