@@ -4,7 +4,7 @@
             id: 1,
             name: 'Professional Cue',
             price: 199.99,
-            rating: 4.8,
+            rating: 4.5,
             category: 'Cues',
             image: 'assets/icons/cue1.webp',
             description: 'High-quality professional billiards cue',
@@ -99,7 +99,7 @@
                     </div>
                 </a>
                 <button class="btn add-to-cart" onclick="addToCart(${product.id})">Add to Cart</button>
-                <button class="btn btn view-reviews"  onclick="showReviews(${product.id})">Reviews</button>
+                <button class="btn btn view-reviews"  class="product-link" ><a class='reviewLink' href="pages/products/product${product.id}.html#customerReviews" target="_blank">Reviews</a></button>
             </div>
         `).join('');
     }
@@ -363,36 +363,42 @@
 
     // Quick accessories link
     accessoriesLink.addEventListener('click', function(event) {
-        event.preventDefault(); 
+        event.preventDefault();
         
-        categorySelect.value = 'Accessories'; 
+        categorySelect.value = 'Accessories';
         
         filterByCategory();
+
+        document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
     });
 
     // Quick Cues link
     cuesLink.addEventListener('click', function(event) {
-        event.preventDefault(); 
+        event.preventDefault();
         
-        categorySelect.value = 'Cues'; 
+        categorySelect.value = 'Cues';
         
         filterByCategory();
+
+        document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
     });
 
     // Quick accessories link
     ballsLink.addEventListener('click', function(event) {
-        event.preventDefault(); 
+        event.preventDefault();
         
-        categorySelect.value = 'Balls'; 
+        categorySelect.value = 'Balls';
         
         filterByCategory();
+
+        document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
     });
 
     // Filter products by category
     function filterByCategory() {
         const selectedCategory = categorySelect.value;
-        const filteredProducts = selectedCategory === 'all' 
-            ? products 
+        const filteredProducts = selectedCategory === 'all'
+            ? products
             : products.filter(product => product.category === selectedCategory);
         displayProducts(filteredProducts);
     }

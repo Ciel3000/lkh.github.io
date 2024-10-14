@@ -195,6 +195,7 @@ header.scrolled nav {
 
 .add-to-cart,.view-reviews{
     text-align: center;
+    text-decoration: none;
     margin-bottom: var(--spacing-medium);
 }
 
@@ -295,6 +296,10 @@ header.scrolled nav {
     text-align: center;
 }
 
+.reviewLink{
+    text-decoration: none;
+    color: inherit;
+}
 
 /* Footer Styles */
 footer {
